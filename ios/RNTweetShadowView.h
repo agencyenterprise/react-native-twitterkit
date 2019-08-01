@@ -1,6 +1,5 @@
 #import <React/RCTShadowView.h>
-#import <TwitterKit/TwitterKit.h>
-
+#import <TwitterKit/TWTRKit.h>
 
 @interface RNTweetShadowView : RCTShadowView
 

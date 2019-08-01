@@ -13,7 +13,7 @@
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
-#import <TwitterKit/TwitterKit.h>
+#import <TwitterKit/TWTRKit.h>
 
 @class RNTwitterKitView;
 
@@ -23,13 +23,13 @@
 - (void)tweetView:(RNTwitterKitView *)view requestsResize:(CGSize)newSize;
 @end
 
-@interface RNTwitterKitView : RCTView<TWTRTweetViewDelegate>
+@interface RNTwitterKitView : RCTView <TWTRTweetViewDelegate>
 
 @property(nonatomic, weak) id<RNTwitterKitViewDelegate> delegate;
-@property (nonatomic, strong) TWTRAPIClient *twitterAPIClient;
+@property(nonatomic, strong) TWTRAPIClient *twitterAPIClient;
 
-@property (nonatomic, copy) RCTBubblingEventBlock onLoadSuccess;
-@property (nonatomic, copy) RCTBubblingEventBlock onLoadError;
+@property(nonatomic, copy) RCTBubblingEventBlock onLoadSuccess;
+@property(nonatomic, copy) RCTBubblingEventBlock onLoadError;
 
 - (void)respondToPropChanges;
 @end
